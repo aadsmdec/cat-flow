@@ -22,7 +22,6 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             var component = this;
             window["catfn"] = function(jsonData) {
                 var catImages = [];
-                var getNsfw = component.templateObjects.nsfwCheckbox.checked;
                 
                 for (var i = 0; i < jsonData.data.children.length; i++) {
                     var item = jsonData.data.children[i];
