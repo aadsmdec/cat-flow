@@ -43,6 +43,10 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     
     handleSelectedSubChange: {
         value: function(selectedSub) {
+            if (!selectedSub) {
+                return;
+            }
+            
             var script = document.createElement("script");
             
             script.src = "http://www.reddit.com/r/" + selectedSub + ".json?limit=100&jsonp=catfn";
