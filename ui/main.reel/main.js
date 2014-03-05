@@ -28,9 +28,8 @@ exports.Main = Component.specialize(/** @lends Main# */ {
                     var item = jsonData.data.children[i];
                     
                     if (item.data.url.toLowerCase().match(/i.imgur.com\/[a-zA-Z0-9]+.(jpg|gif)/)) {
-                        if (getNsfw || !item.data.over_18) {
-                            catImages.push(item.data.url.replace(".jpg", "m.jpg"));
-                        }
+                        item.data.mediumUrl = item.data.url.replace(".jpg", "m.jpg")
+                        catImages.push(item.data);
                     }
                     component.catImages = catImages;
                 }
