@@ -17,6 +17,21 @@
                 "selectedSub": {"<-": "@subSelect.value.sub"}
             }
         },
+        "addSubButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "addSubButton"},
+                "enabled": true,
+                "label": "+"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
         "flow": {
             "prototype": "montage/ui/flow.reel",
             "properties": {
@@ -862,6 +877,13 @@
             "properties": {
                 "element": {"#": "subSelect"}
             }
+        },
+        "subTextField": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "subTextField"},
+                "placeholderValue": "Text"
+            }
         }
     }
     </script>
@@ -875,6 +897,8 @@
         </select>
         <input type="checkbox" data-montage-id="nsfwCheckbox">
         NSFW
+        <input data-montage-id="subTextField" type="text">
+        <button data-montage-id="addSubButton"></button>
         <div id="rainbow"></div>
         <img id="nyan" src="nyan.gif">
         <div style="position: absolute; top: 45px; left: 0; right: 0; bottom: 0" data-montage-id="flow">
