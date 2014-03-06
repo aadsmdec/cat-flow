@@ -854,7 +854,7 @@
         "rangeController": {
             "prototype": "montage/core/range-controller",
             "bindings": {
-                "content": {"<-": "@owner.catImages"}
+                "content": {"<-": "@owner.catImages.filter{@nsfwCheckbox.checked || !over_18}"}
             }
         },
         "subSelect": {
