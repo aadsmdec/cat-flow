@@ -53,5 +53,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
             script.src = "http://www.reddit.com/r/" + selectedSub + ".json?limit=100&jsonp=catfn";
             document.head.appendChild(script);
         }
+    },
+    
+    handleAddSubButtonAction: {
+        value: function() {
+            var templateObjects = this.templateObjects;
+            
+            templateObjects.subSelect.content.push({label: templateObjects.subTextField.value});
+        }
     }
 });
