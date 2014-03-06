@@ -42,6 +42,12 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         }
     },
     
+    addSub: {
+        value: function(sub) {
+            this.templateObjects.subSelect.content.push({label: sub, sub: sub});
+        }
+    },
+    
     handleSelectedSubChange: {
         value: function(selectedSub) {
             if (!selectedSub) {
@@ -57,10 +63,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     
     handleAddSubButtonAction: {
         value: function() {
-            var templateObjects = this.templateObjects;
-            var sub = templateObjects.subTextField.value;
-            
-            templateObjects.subSelect.content.push({label: sub, sub: sub});
+            addSub(templateObjects.subTextField.value);
+        }
+    },
+    
+    handleSubTextFieldAction: {
+        value: function() {
+            addSub(templateObjects.subTextField.value);
         }
     }
 });

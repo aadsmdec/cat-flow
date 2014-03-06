@@ -883,7 +883,14 @@
             "properties": {
                 "element": {"#": "subTextField"},
                 "placeholderValue": "Text"
-            }
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
         }
     }
     </script>
