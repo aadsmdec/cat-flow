@@ -58,8 +58,9 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     handleAddSubButtonAction: {
         value: function() {
             var templateObjects = this.templateObjects;
+            var sub = templateObjects.subTextField.value;
             
-            templateObjects.subSelect.content.push({label: templateObjects.subTextField.value});
+            templateObjects.subSelect.content.push({label: sub, sub: sub});
         }
     }
 });
