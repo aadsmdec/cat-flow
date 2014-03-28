@@ -1,0 +1,1 @@
+montageDefine("502c0d4","package.json",{exports:{name:"weak-map",version:"1.0.0",main:"weak-map.js",_id:"weak-map@1.0.0",dist:{shasum:"78b41fa948c0777ff8f41ad1cda10a37c22bad78"},_from:"weak-map@1.0.0",_resolved:"https://registry.npmjs.org/weak-map/-/weak-map-1.0.0.tgz",hash:"502c0d4",mappings:{},production:!0,useScriptInjection:!0}});
