@@ -1,1 +1,1 @@
-function evaluate(e,t,n,r,i){var a;a="string"==typeof e?parse(e):e;var o=compile(a),s=new Scope(t);return s.parameters=n,s.document=r,s.components=i,o(s)}var parse=require("./parse"),compile=require("./compile-evaluator"),Scope=require("./scope");module.exports=evaluate;
+function evaluate(e,t,n,r,i){var o;o="string"==typeof e?parse(e):e;var a=compile(o),s=new Scope(t);return s.parameters=n,s.document=r,s.components=i,a(s)}var parse=require("./parse"),compile=require("./compile-evaluator"),Scope=require("./scope");module.exports=evaluate;
